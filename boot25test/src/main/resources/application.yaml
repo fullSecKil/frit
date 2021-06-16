@@ -1,0 +1,9 @@
+server:
+  http2:
+    enabled: true
+  ssl:
+    enabled: false
+
+spring:
+  profiles:
+    active: dev

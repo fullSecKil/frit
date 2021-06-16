@@ -1,0 +1,58 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-test-query: select 1 from dual
+      connection-timeout: 5000
+      idle-timeout: 20000
+      max-lifetime: 180000
+      maximum-pool-size: 10
+      minimum-idle: 3
+    url: mpw:uvXxEtlixO2OrDESmrflYi6Qljlt03AgCtXruyDexGd1whphZWzKA8GAXkrMSNe4nVONBMudRCo5c2jqesyLIj2gups5XiLJjDY+5tDZmiTAlpht78u3ieg5WJTtwh2GpypZ/d1iTt0Qw8cYwIiItYwM1bqBGgVenAJF3JcpSiTgBvtlfgK9VmVuP0Ri8SItJRDKWkWVpL7XFBAELsGFyQ==
+    username: mpw:wqpJ1b5GcnfTW6l287fTMA==
+    password: mpw:XD8MZ99xVJtISxysqxrJQQ==
+  devtools:
+    restart:
+      enabled: true
+  servlet:
+    multipart:
+      # 上传文件最大为 200M
+      max-file-size: 200MB
+      # 上传请求最大为 300M
+      max-request-size: 300MB
+      location: D:/fileDownload
+  redis:
+    lettuce:
+      cluster:
+        refresh:
+          adaptive: true
+    cluster:
+      nodes:
+        - 192.168.1.71:7000
+        - 192.168.1.71:7001
+        - 192.168.1.71:7002
+        - 192.168.1.71:7003
+        - 192.168.1.71:7004
+        - 192.168.1.71:7005
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#
+#server:
+#  port: 8445
+#  http2:
+#    # 启用http2
+#    enabled: true
+#  http:
+#    port: 8082
+#  ssl:
+#    key-store: classpath:ams.p12
+#    key-store-password: 123456
+#    key-password: 123456
+#    protocol: TLSv1.2 # 协议类型
+
+debug: false
+
+update:
+  file:
+    excelPath: d:/file/excel
